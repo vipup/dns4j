@@ -22,7 +22,7 @@ public class HeaderImpl implements Header {
     private boolean recursionAvailable;
     private int responseCode;
     private int z;
-    private int qdcount;
+    private int qdCount;
     private int arcount;
     private int nscount;
     private int ancount;    
@@ -33,7 +33,7 @@ public class HeaderImpl implements Header {
             "Header(id="+id+", qr="+isQuery()+", opcode="+getOpcode()+
             ", aa="+isAuthoritative()+", tc="+isTruncated()+
             ", rd="+isRecursionDesidered()+", ra="+isRecursionAvailable()+
-            ", z="+getZ()+", rcode="+getResponseCode()+", qd="+qdcount+
+            ", z="+getZ()+", rcode="+getResponseCode()+", qd="+qdCount+
             ", an="+ancount+", ns="+nscount+", ar="+arcount+")";
     }
     
@@ -47,7 +47,7 @@ public class HeaderImpl implements Header {
 		result = prime * result + id;
 		result = prime * result + nscount;
 		result = prime * result + opcode;
-		result = prime * result + qdcount;
+		result = prime * result + qdCount;
 		result = prime * result + (query ? 1231 : 1237);
 		result = prime * result + (recursionAvailable ? 1231 : 1237);
 		result = prime * result + (recursionDesidered ? 1231 : 1237);
@@ -78,7 +78,7 @@ public class HeaderImpl implements Header {
 			return false;
 		if (opcode != other.opcode)
 			return false;
-		if (qdcount != other.qdcount)
+		if (qdCount != other.qdCount)
 			return false;
 		if (query != other.query)
 			return false;
@@ -142,7 +142,7 @@ public class HeaderImpl implements Header {
 
     @Override
     public int getQdCount() {
-        return qdcount;
+        return qdCount;
     }
 
     @Override
@@ -192,7 +192,7 @@ public class HeaderImpl implements Header {
 
     @Override
     public void setQdCount(int qdcount) {
-        this.qdcount = qdcount;
+        this.qdCount = qdcount;
     }
 
     @Override
