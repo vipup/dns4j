@@ -12,14 +12,14 @@ public class TestCase {
 	
 	private int id;
 	private String b64;
-	private Message m;
+	private Message msg;
 		
 	public TestCase() {
 	}
 
 	@Override
 	public String toString() {
-		return "TestCase(id="+id+", b64="+b64+", message="+m+")";
+		return "TestCase(id="+id+", b64="+b64+", message="+msg+")";
 	}
 
 	public int getId() {
@@ -35,9 +35,9 @@ public class TestCase {
 		this.b64 = b64;
 	}
 	public Message getMsg() {
-		return m;
+		return msg;
 	}
 	public void setMsg(Message m) {
-		this.m = m;
+		this.msg = m;
 	}
 }

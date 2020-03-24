@@ -20,14 +20,14 @@ import java.util.List;
 public class MessageImpl implements Message {
 
 	private Header header = new HeaderImpl();
-    private List<Question> question = new LinkedList<Question>();
+    private List<Question> questions = new LinkedList<Question>();
     private List<RR> answer = new LinkedList<RR>();
     private List<RR> authority = new LinkedList<RR>();
     private List<RR> additional = new LinkedList<RR>();
 
     @Override
     public String toString() {
-        return "Message(header="+header+", question="+question+", answer="+answer+", authority"+authority+", additional="+additional+")";
+        return "Message(header="+header+", question="+questions+", answer="+answer+", authority"+authority+", additional="+additional+")";
     }
     
     @Override
@@ -41,7 +41,7 @@ public class MessageImpl implements Message {
 				+ ((authority == null) ? 0 : authority.hashCode());
 		result = prime * result + ((header == null) ? 0 : header.hashCode());
 		result = prime * result
-				+ ((question == null) ? 0 : question.hashCode());
+				+ ((questions == null) ? 0 : questions.hashCode());
 		return result;
 	}
 
@@ -74,10 +74,10 @@ public class MessageImpl implements Message {
 				return false;
 		} else if (!header.equals(other.header))
 			return false;
-		if (question == null) {
-			if (other.question != null)
+		if (questions == null) {
+			if (other.questions != null)
 				return false;
-		} else if (!question.equals(other.question))
+		} else if (!questions.equals(other.questions))
 			return false;
 		return true;
 	}
@@ -89,7 +89,7 @@ public class MessageImpl implements Message {
 
     @Override
     public List<Question> getQuestions() {
-        return question;
+        return questions;
     }
 
     @Override
@@ -129,7 +129,7 @@ public class MessageImpl implements Message {
 
     @Override
     public void setQuestions(List<Question> question) {
-        this.question = question;
+        this.questions = question;
     }
 
 }

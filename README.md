@@ -6,7 +6,7 @@
 ####On Linux:
 
 0. Install Java 6 Runtime Enviroment on you server
-1. download latest DNS4J release from http://dns4j.sourceforge.net/downloads
+1. download latest DNS4J release from [Github][]
 2. put downloaded jar in $JRE_HOME/lib/ext
 3. create configurations files:
 
@@ -132,3 +132,6 @@ DNS4J is released under LGPLv3 license.
 + Implement recursive resolver	 
 + Create ant target to build packages for various unix distributions
 + write man-pages
+
+
+[Github]: https://github.com/vipup/dns4j
